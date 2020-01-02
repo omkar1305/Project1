@@ -1,0 +1,12 @@
+<!DOCTYPE html> {% extends 'home/base.htm' %} {% block content %}
+
+<form method="POST" enctype="multipart/form-data" style="margin-top: 60px;" >
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <div class="custom-file">
+            <button type="submit" class="btn btn-primary" value="1" name='integrate'>Fetch Data</button>
+        </div>
+    </div>
+
+</form>
+{% endblock %}

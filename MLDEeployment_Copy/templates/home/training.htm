@@ -1,0 +1,21 @@
+<!DOCTYPE html> {% extends 'home/base.htm' %} {% block content %}
+
+<form method="POST" enctype="multipart/form-data" style="margin-top: 60px;">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="file-input" name='document' />
+            <label class="custom-file-label" for="file-input">Choose file</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" value="1" name='train_upload'>Run model</button>
+   </form>
+<form method="POST" enctype="multipart/form-data" style="margin-top: 60px;">
+     <select name="cars" class="custom-select">
+    <option selected>Custom Select Menu</option>
+    <option value="volvo">Volvo</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+</form>
+{{df}} {%endblock%}
